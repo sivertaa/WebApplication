@@ -4,15 +4,22 @@
     <title>Computer Science Society</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
   </head>
   <body>
 
-    <!-- Header -->
-    <section id="header" class="dark">
+    <!-- Desktop Menu -->
+    <section id="desktop-menu">
+      <ul>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="committee.html">Committee</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </section>
+
+    <!-- Desktop Header -->
+    <section id="desktop-header">
       <header>
         <h1>Computer Science Society</h1>
         <h2>The University of Manchester</h2>
@@ -23,72 +30,62 @@
       </header>
     </section>
 
-    <!-- Menu -->
-    <section id="menu" class="main">
-      <div class="content dark style2">
-        <div class="container 75%">
-          <div class="row">
-            <div class="6u"><a href="#" class="image fit"><img src="assets/images/home/pic01.jpg" alt="Events" /></a></div>
-            <div class="6u"><a href="#" class="image fit"><img src="assets/images/home/pic02.jpg" alt="Committee" /></a></div>
-            <div class="6u"><a href="#" class="image fit"><img src="assets/images/home/pic03.jpg" alt="Gallery" /></a></div>
-            <div class="6u"><a href="#" class="image fit"><img src="assets/images/home/pic04.jpg" alt="Merchandise" /></a></div>
-          </div>
-        </div>
-      </div>
+    <!-- Mobile Header -->
+    <section id="mobile-header">
+      <header>
+        <h1>Computer Science Society</h1>
+      </header>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="main">
-      <header>
-        <div class="container">
-          <h2>Contact Us</h2>
-          <p>Something you'd like to tell us? We would love to hear it!</p>
-        </div>
-      </header>
-      <div class="content style4 featured">
-        <div class="container 75%">
-          <form method="post" action="#">
-            <div class="row 50%">
-              <div class="6u 12u(mobile)"><input type="text" placeholder="Name" /></div>
-              <div class="6u 12u(mobile)"><input type="text" placeholder="Email" /></div>
-            </div>
-            <div class="row 50%">
-              <div class="12u"><textarea name="message" placeholder="Message"></textarea></div>
-            </div>
-            <div class="row">
-              <div class="12u">
-                <ul class="actions">
-                  <li><input type="submit" class="button" value="Send Message" /></li>
-                  <li><input type="reset" class="button alt" value="Clear Form" /></li>
-                </ul>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
+    <!-- Mobile Menu -->
+    <section id="mobile-menu">
+      <ul>
+        <li style="background-image: url('assets/images/index/events.png')">
+          <a href="#">
+            <h2>Events</h2>
+            <p>See upcoming and past events</p>
+          </a>
+        </li>
+        <li style="background-image: url('assets/images/index/committee.png')">
+          <a href="#">
+            <h2>Committee</h2>
+            <p>See the CSSoc committee</p>
+          </a>
+        </li>
+        <li style="background-image: url('assets/images/index/sponsors.png')">
+          <a href="#">
+            <h2>Gallery</h2>
+            <p>Lorem ipsum dolor sit amet</p>
+          </a>
+        </li>
+        <li style="background-image: url('assets/images/index/sign-up.png')">
+          <a href="#">
+            <h2>Contact</h2>
+            <p>Lorem ipsum dolor sit amet</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Sponsors -->
+    <section id="sponsors">
+      <header>Sponsors</header>
+      <ul>
+        <li><a href="https://www.credit-suisse.com/">Credit Suisse</a></li>
+      </ul>
     </section>
 
     <!-- Footer -->
     <section id="footer">
       <ul class="icons">
-        <li><a href="https://twitter.com/cssoc" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-        <li><a href="https://facebook.com/cssoc.man/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-        <li><a href="https://github.com/cssoc" class="icon fa-github"><span class="label">GitHub</span></a></li>
+        <li><a href="https://twitter.com/cssoc">Twitter</a></li>
+        <li><a href="https://facebook.com/cssoc.man/">Facebook</a></li>
+        <li><a href="https://github.com/cssoc">GitHub</a></li>
       </ul>
       <div class="copyright">
-        <ul class="menu">
-          <li>&copy; Computer Science Society. All rights reserved.</li><li>Design Template: <a href="http://html5up.net">HTML5 UP</a></li>
-        </ul>
+        &copy; Computer Science Society. All rights reserved.
       </div>
     </section>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/skel.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <!--[if lte IE 8]><script src="theme/js/ie/respond.min.js"></script><![endif]-->
-    <script src="assets/js/scripts.js"></script>
 
   </body>
 </html>
