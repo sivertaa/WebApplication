@@ -153,21 +153,22 @@ ul {
 
     #mobile-menu {
         display: inherit;
-        height: 84vw;
-        padding: 3vw;
+        height: 102vw;
+        padding: 1vw;
+        padding-top: 9vw;
         background: #1b0c23;
         text-align: center;
     }
 
         #mobile-menu > div {
             display: inline-block;
-            width: 84vw;
+            width: 94vw;
         }
 
             #mobile-menu > div > a {
                 display: block;
-                width: 40vw;
-                height: 40vw;
+                width: 45vw;
+                height: 45vw;
                 margin: 1vw;
                 background-size: 100%;
                 cursor: pointer;
@@ -175,11 +176,11 @@ ul {
             }
 
                 #mobile-menu > div > a > div {
-                    width: 37vw;
+                    width: 42vw;
                     height: 10vw;
                     background-color: rgba(0, 0, 0, 0.6);
                     position: relative;
-                    top: 30vw;
+                    top: 35vw;
                     padding-left: 3vw;
                     color: #fff;
                     text-align: left;
