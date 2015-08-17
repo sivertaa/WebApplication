@@ -1,13 +1,27 @@
 body {
     font-family: "Segoe UI Light";
-    margin: 0px;
+    margin: 0;
 }
+
+
+.aspect-ratio-1-1 {
+    display: block;
+    position: relative;
+    padding-top: 100%; /* 15% padding would mean 15:85 */
+}
+
+    .aspect-ratio-1-1 > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
 
 
 #desktop-menu {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
     display: inherit;
     text-align: center;
     width: 100%;
@@ -18,25 +32,24 @@ body {
 }
 
     #desktop-menu > ul {
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
     }
 
         #desktop-menu > ul > li {
             display: inline-block;
-            margin-left: 20px;
-            margin-right: 20px;
+            margin: 0 20px 0 20px;
         }
 
 
 #desktop-header {
     position: relative;
-    margin: 0px;
+    margin: 0;
     background-image: url("images/overlay.png"), url("../images/header.jpg");
     background-size: auto, cover;
     background-position: top left, center center;
     background-repeat: repeat, no-repeat;
-    padding: 230px 0px 230px 0px;
+    padding: 230px 0 230px 0;
     text-align: center;
     color: #fff;
 }
@@ -44,18 +57,17 @@ body {
     #desktop-header h1 {
         font-size: 36px;
         line-height: 30px;
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 
     #desktop-header h2 {
         font-size: 25px;
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 
-    #desktop-header p {
+    #desktop-header a {
+        display: inline-block;
         margin-top: 30px;
-        font-weight: 100;
-        padding: 0px;
         font-size: 20px;
         line-height: 24px;
         text-align: center;
@@ -72,71 +84,62 @@ body {
 }
 
 
-ul {
-    padding: 0px;
-    cursor: default;
+.sponsors {
+    background-color: #ccc;
 }
-
-
-#footer {
-    text-align: center;
-}
-
-    #footer .sponsors {
-        background-color: #ccc;
-    }
         
-        #footer .sponsors ul.icons {
-            margin: 0px;
-            padding: 16px;
+    .sponsors ul.icons {
+        margin: 0;
+        padding: 16px;
+        text-align: center;
+    }
+
+        .sponsors ul.icons li {
+            display: inline-block;
+            padding: 0 16px 0 16px;
         }
 
-            #footer .sponsors ul.icons li {
-                display: inline-block;
-                margin-left: 16px;
-                margin-right: 16px;
-            }
+        .sponsors ul.icons img {
+            max-height: 100px;
+            max-width: 100%;
+        }
 
-            #footer .sponsors ul.icons img {
+
+.social-media {
+    background-color: #aaa;
+}
+
+    .social-media ul.icons {
+        margin: 0;
+        padding: 14px;
+        text-align: center;
+    }
+
+        .social-media ul.icons li {
+            display: inline-block;
+            margin: 0 12px 0 12px;
+        }
+
+            .social-media ul.icons li a {
+                -moz-transition: background-color 0.15s ease-in-out;
+                -webkit-transition: background-color 0.15s ease-in-out;
+                -ms-transition: background-color 0.15s ease-in-out;
+                transition: background-color 0.15s ease-in-out;
+                border-radius: 50%;
                 display: block;
-                width: auto;
-                max-height: 100px;
-                max-width: 100%;
+                width: 60px;
+                height: 60px;
             }
 
-    #footer .social-media {
-        background-color: #aaa;
-    }
-
-        #footer .social-media ul.icons {
-            margin: 0px;
-            padding: 14px;
-        }
-
-            #footer .social-media ul.icons li {
-                display: inline-block;
-                margin-left: 12px;
-                margin-right: 12px;
+            .social-media ul.icons li a:hover {
+                background: rgba(0, 0, 0, 0.05);
             }
 
-                #footer .social-media ul.icons li a {
-                    -moz-transition: background-color 0.15s ease-in-out;
-                    -webkit-transition: background-color 0.15s ease-in-out;
-                    -ms-transition: background-color 0.15s ease-in-out;
-                    transition: background-color 0.15s ease-in-out;
-                    border-radius: 50%;
-                    display: block;
-                    width: 60px;
-                    height: 60px;
-                }
 
-                #footer .social-media ul.icons li a:hover {
-                    background: rgba(0, 0, 0, 0.05);
-                }
-
-    #footer .copyright {
-        margin: 15px;
-    }
+.copyright {
+    text-align: center;
+    margin: 10px;
+}
 
 
 /* Mobile */
@@ -153,62 +156,60 @@ ul {
 
     #mobile-menu {
         display: inherit;
-        height: 102vw;
-        padding: 1vw;
-        padding-top: 9vw;
         background: #1b0c23;
-        text-align: center;
     }
 
-        #mobile-menu > div {
-            display: inline-block;
-            width: 94vw;
+
+    .tiles {
+        padding: 2%;
+    }
+
+        .tiles > a {
+            display: block;
+            width: 48%;
+            height: 48%;
+            margin: 1%;
+            background-size: 100%;
+            text-decoration: none;
+            float: left;
         }
 
-            #mobile-menu > div > a {
-                display: block;
-                width: 45vw;
-                height: 45vw;
-                margin: 1vw;
-                background-size: 100%;
-                cursor: pointer;
-                float: left;
+            .tiles > a > div {
+                height: 20%;
+                top: 80%;
+                background-color: rgba(0, 0, 0, 0.6);
+                position: relative;
             }
 
-                #mobile-menu > div > a > div {
-                    width: 42vw;
-                    height: 10vw;
-                    background-color: rgba(0, 0, 0, 0.6);
-                    position: relative;
-                    top: 35vw;
-                    padding-left: 3vw;
+                .tiles > a > div > h2 {
+                    margin: 0;
+                    padding: 2% 0 0 10%;
+                    padding-left: 10%;
                     color: #fff;
                     text-align: left;
-                    line-height: 10vw;
-                    font-size: 4vw;
+                    font-size: 20px;
                     font-weight: normal;
                 }
 
 
     #mobile-header {
         display: inherit;
-        height: 15vw;
+        height: 90px;
         color: #fff;
         background-color: #6b2c90;
     }
 
         #mobile-header img {
             float: left;
-            width: 13vw;
-            height: 13vw;
-            padding: 1vw;
+            width: 70px;
+            height: 70px;
+            padding: 10px;
         }
 
         #mobile-header h1 {
-            margin-top: 0px;
+            margin: 0;
             font-weight: normal;
-            font-size: 5vw;
-            line-height: 15vw;
-            overflow: hidden;
+            font-size: 23px;
+            line-height: 90px;
         }
 }
