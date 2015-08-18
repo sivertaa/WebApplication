@@ -25,8 +25,8 @@ body {
     display: inherit;
     text-align: center;
     width: 100%;
-    height: 75px;
-    line-height: 75px;
+    height: 75px; height: 8vh;
+    line-height: 75px; line-height: 8vh;
     font-size: 20px;
     z-index: 1;
 }
@@ -43,13 +43,13 @@ body {
 
 
 #desktop-header {
-    position: relative;
     margin: 0;
     background-image: url("images/overlay.png"), url("../images/header.jpg");
     background-size: auto, cover;
     background-position: top left, center center;
     background-repeat: repeat, no-repeat;
-    padding: 230px 0 230px 0;
+    padding: 230px 0 230px 0; padding: 25vh 0 25vh 0;
+    height: 150px; height: 25vh;
     text-align: center;
     color: #fff;
 }
@@ -57,20 +57,85 @@ body {
     #desktop-header h1 {
         font-size: 36px;
         line-height: 30px;
-        margin-bottom: 0;
+        margin: 0 20px 20px 20px;
     }
 
     #desktop-header h2 {
         font-size: 25px;
-        margin-bottom: 0;
+        margin: 10px;
     }
 
     #desktop-header a {
         display: inline-block;
-        margin-top: 30px;
+        margin: 20px 20px 0 20px;
         font-size: 20px;
         line-height: 24px;
         text-align: center;
+    }
+
+
+#desktop-footer {
+    display: inherit;
+}
+
+    #desktop-footer .sponsors {
+        background-color: #ccc;
+        height: 135px; height: 15vh;
+    }
+            
+        #desktop-footer .sponsors ul.icons {
+            margin: 0;
+            padding: 16px; padding: 2vh;
+            text-align: center;
+        }
+
+            #desktop-footer .sponsors ul.icons li {
+                display: inline-block;
+                padding: 0 20px 0 20px;
+            }
+
+            #desktop-footer .sponsors ul.icons img {
+                max-height: 100px; max-height: 11vh;
+                max-width: 100%;
+            }
+
+    #desktop-footer .social-media {
+        background-color: #aaa;
+        height: 70px; height: 7vh;
+    }
+
+        #desktop-footer .social-media ul.icons {
+            margin: 0;
+            padding: 5px; padding: 1vh;
+            text-align: center;
+        }
+
+            #desktop-footer .social-media ul.icons li {
+                display: inline-block;
+                margin: 0 12px 0 12px;
+            }
+
+                #desktop-footer .social-media ul.icons li a {
+                    -moz-transition: background-color 0.15s ease-in-out;
+                    -webkit-transition: background-color 0.15s ease-in-out;
+                    -ms-transition: background-color 0.15s ease-in-out;
+                    transition: background-color 0.15s ease-in-out;
+                    border-radius: 50%;
+                    display: block;
+                    width: 60px; width: 5vh;
+                    height: 60px; height: 5vh;
+                }
+
+                #desktop-footer .social-media ul.icons li a:hover {
+                    background: rgba(0, 0, 0, 0.05);
+                }
+
+    #desktop-footer .copyright {
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-size: 14px;
+        line-height: 30px; line-height: 3vh;
     }
 
 
@@ -84,61 +149,8 @@ body {
 }
 
 
-.sponsors {
-    background-color: #ccc;
-}
-        
-    .sponsors ul.icons {
-        margin: 0;
-        padding: 16px;
-        text-align: center;
-    }
-
-        .sponsors ul.icons li {
-            display: inline-block;
-            padding: 0 16px 0 16px;
-        }
-
-        .sponsors ul.icons img {
-            max-height: 100px;
-            max-width: 100%;
-        }
-
-
-.social-media {
-    background-color: #aaa;
-}
-
-    .social-media ul.icons {
-        margin: 0;
-        padding: 14px;
-        text-align: center;
-    }
-
-        .social-media ul.icons li {
-            display: inline-block;
-            margin: 0 12px 0 12px;
-        }
-
-            .social-media ul.icons li a {
-                -moz-transition: background-color 0.15s ease-in-out;
-                -webkit-transition: background-color 0.15s ease-in-out;
-                -ms-transition: background-color 0.15s ease-in-out;
-                transition: background-color 0.15s ease-in-out;
-                border-radius: 50%;
-                display: block;
-                width: 60px;
-                height: 60px;
-            }
-
-            .social-media ul.icons li a:hover {
-                background: rgba(0, 0, 0, 0.05);
-            }
-
-
-.copyright {
-    text-align: center;
-    margin: 10px;
+#mobile-footer {
+    display: none;
 }
 
 
@@ -150,6 +162,11 @@ body {
 
 
     #desktop-header {
+        display: none;
+    }
+
+
+    #desktop-footer {
         display: none;
     }
 
@@ -212,5 +229,68 @@ body {
             font-weight: normal;
             font-size: 18px;
             line-height: 70px;
+        }
+
+
+    #mobile-footer {
+        display: inherit;
+    }
+
+        #mobile-footer .sponsors {
+            background-color: #ccc;
+        }
+                
+            #mobile-footer .sponsors ul.icons {
+                margin: 0;
+                padding: 16px;
+                text-align: center;
+            }
+
+                #mobile-footer .sponsors ul.icons li {
+                    display: inline-block;
+                    padding: 0 20px 0 20px;
+                }
+
+                #mobile-footer .sponsors ul.icons img {
+                    max-height: 100px;
+                    max-width: 100%;
+                }
+
+        #mobile-footer .social-media {
+            background-color: #aaa;
+        }
+
+            #mobile-footer .social-media ul.icons {
+                margin: 0;
+                padding: 5px;
+                text-align: center;
+            }
+
+                #mobile-footer .social-media ul.icons li {
+                    display: inline-block;
+                    margin: 0 10px 0 10px;
+                }
+
+                    #mobile-footer .social-media ul.icons li a {
+                        -moz-transition: background-color 0.15s ease-in-out;
+                        -webkit-transition: background-color 0.15s ease-in-out;
+                        -ms-transition: background-color 0.15s ease-in-out;
+                        transition: background-color 0.15s ease-in-out;
+                        border-radius: 50%;
+                        display: block;
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                    #mobile-footer .social-media ul.icons li a:hover {
+                        background: rgba(0, 0, 0, 0.05);
+                    }
+
+        #mobile-footer .copyright {
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-size: 14px;
+            line-height: 30px;
         }
 }
