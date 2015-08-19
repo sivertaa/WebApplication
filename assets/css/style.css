@@ -43,15 +43,15 @@ h2, h3, h4, h5, h6, p {
     z-index: 1;
 }
 
-    #desktop-menu > ul {
+    #desktop-menu ul {
         margin: 0;
         padding: 0;
     }
 
-        #desktop-menu > ul > li {
-            display: inline-block;
-            margin: 0 20px 0 20px;
-        }
+    #desktop-menu li {
+        display: inline-block;
+        margin: 0 20px 0 20px;
+    }
 
 
 #desktop-header {
@@ -99,17 +99,19 @@ h2, h3, h4, h5, h6, p {
             margin: 0;
             padding: 16px; padding: 2vh;
             text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
         }
 
-            #desktop-footer .sponsors li {
-                display: inline-block;
-                padding: 0 20px 0 20px;
-            }
+        #desktop-footer .sponsors li {
+            display: inline-block;
+            padding: 0 20px 0 20px;
+        }
 
-            #desktop-footer .sponsors img {
-                max-height: 100px; max-height: 11vh;
-                max-width: 100%;
-            }
+        #desktop-footer .sponsors img {
+            max-height: 100px; max-height: 11vh;
+            max-width: 100%;
+        }
 
     #desktop-footer .social-media {
         background-color: #aaa;
@@ -122,17 +124,16 @@ h2, h3, h4, h5, h6, p {
             text-align: center;
         }
 
-            #desktop-footer .social-media li {
-                display: inline-block;
-                margin: 0 12px 0 12px;
-            }
+        #desktop-footer .social-media li {
+            display: inline-block;
+            margin: 0 12px 0 12px;
+        }
 
-                #desktop-footer .social-media img {
-                    border-radius: 50%;
-                    display: block;
-                    width: 60px; width: 5vh;
-                    height: 60px; height: 5vh;
-                }
+        #desktop-footer .social-media img {
+            border-radius: 50%;
+            width: 60px; width: 5vh;
+            height: 60px; height: 5vh;
+        }
 
     #desktop-footer .copyright {
         text-align: center;
@@ -196,21 +197,21 @@ h2, h3, h4, h5, h6, p {
             float: left;
         }
 
-            .tiles div {
-                height: 20%;
-                top: 80%;
-                background-color: rgba(0, 0, 0, 0.6);
-                position: relative;
-            }
+        .tiles div {
+            height: 20%;
+            top: 80%;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: relative;
+        }
 
-                .tiles h2 {
-                    margin: 0;
-                    padding: 2% 0 0 10%;
-                    padding-left: 10%;
-                    color: #fff;
-                    text-align: left;
-                    font-size: 16px;
-                }
+        .tiles h2 {
+            margin: 0;
+            padding: 2% 0 0 10%;
+            padding-left: 10%;
+            color: #fff;
+            text-align: left;
+            font-size: 16px;
+        }
 
 
     #mobile-header {
@@ -236,6 +237,7 @@ h2, h3, h4, h5, h6, p {
 
     #mobile-footer {
         display: inherit;
+        line-height: 0;
     }
 
         #mobile-footer .sponsors {
@@ -248,16 +250,16 @@ h2, h3, h4, h5, h6, p {
                 text-align: center;
             }
 
-                #mobile-footer .sponsors li {
-                    display: block;
-                    padding: 10px;
-                }
+            #mobile-footer .sponsors li {
+                display: block;
+                padding: 10px;
+            }
 
-                #mobile-footer .sponsors img {
-                    width: inherit;
-                    max-width: 100%;
-                    max-height: 80px;
-                }
+            #mobile-footer .sponsors img {
+                width: inherit;
+                max-width: 100%;
+                max-height: 80px;
+            }
 
         #mobile-footer .social-media {
             background-color: #aaa;
@@ -269,17 +271,16 @@ h2, h3, h4, h5, h6, p {
                 text-align: center;
             }
 
-                #mobile-footer .social-media li {
-                    display: inline-block;
-                    margin: 0 10px 0 10px;
-                }
+            #mobile-footer .social-media li {
+                display: inline-block;
+                margin: 0 10px 0 10px;
+            }
 
-                    #mobile-footer .social-media img {
-                        border-radius: 50%;
-                        display: block;
-                        width: 60px; width: 5vh;
-                        height: 60px; height: 5vh;
-                    }
+            #mobile-footer .social-media img {
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+            }
 
         #mobile-footer .copyright {
             text-align: center;
