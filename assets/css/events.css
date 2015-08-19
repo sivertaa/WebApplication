@@ -65,3 +65,35 @@ a.event {
         padding: 0 16px 0 16px;
     }
 
+
+    a.event {
+        display: block;
+        text-decoration: none;
+        background-color: #ddd;
+        height: 100px;
+    }
+
+        a.event img {
+            width: 80px;
+        }
+
+        a.event .description {
+            height: 74px;
+            padding: 5px 10px 20px 10px;
+        }
+
+            a.event .description h2 {
+                margin: 0 0 5px 0;
+                font-size: 22px;
+            }
+
+            a.event .description .location {
+                margin: 5px 0 5px 0;
+                font-size: 16px;
+            }
+
+            a.event .description .date {
+                margin: 5px 0 0 0;
+                font-size: 16px;
+            }
+}
