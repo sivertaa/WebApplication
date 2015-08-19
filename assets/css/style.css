@@ -15,6 +15,12 @@ h2, h3, h4, h5, h6, p {
 }
 
 
+section > h1 {
+    text-align: center;
+    font-size: 32px;
+}
+
+
 .aspect-ratio-1-1 {
     display: block;
     position: relative;
@@ -86,16 +92,39 @@ h2, h3, h4, h5, h6, p {
     }
 
 
-#desktop-footer {
-    display: inherit;
+#desktop-collapsed-header {
+    margin: 0;
+    background-image: url("images/overlay.png"), url("../images/header.jpg");
+    background-size: auto, cover;
+    background-position: top left, center center;
+    background-repeat: repeat, no-repeat;
+    padding: 230px 0 230px 0; padding: 17vh 0 14vh 0;
+    text-align: center;
+    color: #fff;
 }
 
-    #desktop-footer .sponsors {
+    #desktop-collapsed-header h1 {
+        font-size: 36px;
+        line-height: 30px;
+        margin: 0 20px 20px 20px;
+    }
+
+    #desktop-collapsed-header h2 {
+        font-size: 25px;
+        margin: 10px;
+    }
+
+
+footer {
+    line-height: 0;
+}
+
+    footer .sponsors {
         background-color: #ccc;
         height: 135px; height: 15vh;
     }
-            
-        #desktop-footer .sponsors ul {
+                
+        footer .sponsors ul {
             margin: 0;
             padding: 16px; padding: 2vh;
             text-align: center;
@@ -103,39 +132,39 @@ h2, h3, h4, h5, h6, p {
             white-space: nowrap;
         }
 
-        #desktop-footer .sponsors li {
+        footer .sponsors li {
             display: inline-block;
             padding: 0 20px 0 20px;
         }
 
-        #desktop-footer .sponsors img {
+        footer .sponsors img {
             max-height: 100px; max-height: 11vh;
             max-width: 100%;
         }
 
-    #desktop-footer .social-media {
+    footer .social-media {
         background-color: #aaa;
         height: 70px; height: 7vh;
     }
 
-        #desktop-footer .social-media ul {
+        footer .social-media ul {
             margin: 0;
             padding: 5px; padding: 1vh;
             text-align: center;
         }
 
-        #desktop-footer .social-media li {
+        footer .social-media li {
             display: inline-block;
             margin: 0 12px 0 12px;
         }
 
-        #desktop-footer .social-media img {
+        footer .social-media img {
             border-radius: 50%;
             width: 60px; width: 5vh;
             height: 60px; height: 5vh;
         }
 
-    #desktop-footer .copyright {
+    footer .copyright {
         text-align: center;
         background-color: black;
         color: white;
@@ -154,11 +183,6 @@ h2, h3, h4, h5, h6, p {
 }
 
 
-#mobile-footer {
-    display: none;
-}
-
-
 /* Mobile */
 @media screen and (max-width: 736px) {
     #desktop-menu {
@@ -171,7 +195,7 @@ h2, h3, h4, h5, h6, p {
     }
 
 
-    #desktop-footer {
+    #desktop-collapsed-header {
         display: none;
     }
 
@@ -235,58 +259,49 @@ h2, h3, h4, h5, h6, p {
         }
 
 
-    #mobile-footer {
-        display: inherit;
-        line-height: 0;
+    footer .sponsors {
+        height: auto;
+    }
+                
+        footer .sponsors ul {
+            padding: 16px;
+        }
+
+        footer .sponsors li {
+            display: block;
+            padding: 10px;
+        }
+
+        footer .sponsors img {
+            width: inherit;
+            max-height: 80px;
+        }
+
+
+    footer .social-media {
+        height: auto;
     }
 
-        #mobile-footer .sponsors {
-            background-color: #ccc;
-        }
-                
-            #mobile-footer .sponsors ul {
-                margin: 0;
-                padding: 16px;
-                text-align: center;
-            }
-
-            #mobile-footer .sponsors li {
-                display: block;
-                padding: 10px;
-            }
-
-            #mobile-footer .sponsors img {
-                width: inherit;
-                max-width: 100%;
-                max-height: 80px;
-            }
-
-        #mobile-footer .social-media {
-            background-color: #aaa;
+        footer .social-media ul {
+            margin: 0;
+            padding: 5px;
         }
 
-            #mobile-footer .social-media ul {
-                margin: 0;
-                padding: 5px;
-                text-align: center;
-            }
-
-            #mobile-footer .social-media li {
-                display: inline-block;
-                margin: 0 10px 0 10px;
-            }
-
-            #mobile-footer .social-media img {
-                border-radius: 50%;
-                width: 60px;
-                height: 60px;
-            }
-
-        #mobile-footer .copyright {
-            text-align: center;
-            background-color: black;
-            color: white;
-            font-size: 14px;
-            line-height: 30px;
+        footer .social-media li {
+            margin: 0 10px 0 10px;
         }
+
+        footer .social-media img {
+            width: 60px;
+            height: 60px;
+        }
+
+
+    footer .copyright {
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-size: 14px;
+        line-height: 30px;
+    }
 }
