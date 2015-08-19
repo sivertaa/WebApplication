@@ -1,6 +1,17 @@
 body {
-    font-family: "Segoe UI Light";
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
     margin: 0;
+}
+
+
+h1 {
+    font-weight: 400;
+}
+
+
+h2, h3, h4, h5, h6, p {
+    font-weight: 300;
 }
 
 
@@ -19,6 +30,7 @@ body {
     }
 
 
+/* Desktop */
 #desktop-menu {
     position: absolute;
     top: 0;
@@ -83,18 +95,18 @@ body {
         height: 135px; height: 15vh;
     }
             
-        #desktop-footer .sponsors ul.icons {
+        #desktop-footer .sponsors ul {
             margin: 0;
             padding: 16px; padding: 2vh;
             text-align: center;
         }
 
-            #desktop-footer .sponsors ul.icons li {
+            #desktop-footer .sponsors li {
                 display: inline-block;
                 padding: 0 20px 0 20px;
             }
 
-            #desktop-footer .sponsors ul.icons img {
+            #desktop-footer .sponsors img {
                 max-height: 100px; max-height: 11vh;
                 max-width: 100%;
             }
@@ -104,30 +116,22 @@ body {
         height: 70px; height: 7vh;
     }
 
-        #desktop-footer .social-media ul.icons {
+        #desktop-footer .social-media ul {
             margin: 0;
             padding: 5px; padding: 1vh;
             text-align: center;
         }
 
-            #desktop-footer .social-media ul.icons li {
+            #desktop-footer .social-media li {
                 display: inline-block;
                 margin: 0 12px 0 12px;
             }
 
-                #desktop-footer .social-media ul.icons li a {
-                    -moz-transition: background-color 0.15s ease-in-out;
-                    -webkit-transition: background-color 0.15s ease-in-out;
-                    -ms-transition: background-color 0.15s ease-in-out;
-                    transition: background-color 0.15s ease-in-out;
+                #desktop-footer .social-media img {
                     border-radius: 50%;
                     display: block;
                     width: 60px; width: 5vh;
                     height: 60px; height: 5vh;
-                }
-
-                #desktop-footer .social-media ul.icons li a:hover {
-                    background: rgba(0, 0, 0, 0.05);
                 }
 
     #desktop-footer .copyright {
@@ -182,7 +186,7 @@ body {
         padding: 2%;
     }
 
-        .tiles > a {
+        .tiles a {
             display: block;
             width: 48%;
             height: 48%;
@@ -192,21 +196,20 @@ body {
             float: left;
         }
 
-            .tiles > a > div {
+            .tiles div {
                 height: 20%;
                 top: 80%;
                 background-color: rgba(0, 0, 0, 0.6);
                 position: relative;
             }
 
-                .tiles > a > div > h2 {
+                .tiles h2 {
                     margin: 0;
                     padding: 2% 0 0 10%;
                     padding-left: 10%;
                     color: #fff;
                     text-align: left;
                     font-size: 16px;
-                    font-weight: normal;
                 }
 
 
@@ -226,7 +229,6 @@ body {
 
         #mobile-header h1 {
             margin: 0;
-            font-weight: normal;
             font-size: 18px;
             line-height: 70px;
         }
@@ -240,50 +242,43 @@ body {
             background-color: #ccc;
         }
                 
-            #mobile-footer .sponsors ul.icons {
+            #mobile-footer .sponsors ul {
                 margin: 0;
                 padding: 16px;
                 text-align: center;
             }
 
-                #mobile-footer .sponsors ul.icons li {
-                    display: inline-block;
-                    padding: 0 20px 0 20px;
+                #mobile-footer .sponsors li {
+                    display: block;
+                    padding: 10px;
                 }
 
-                #mobile-footer .sponsors ul.icons img {
-                    max-height: 100px;
+                #mobile-footer .sponsors img {
+                    width: inherit;
                     max-width: 100%;
+                    max-height: 80px;
                 }
 
         #mobile-footer .social-media {
             background-color: #aaa;
         }
 
-            #mobile-footer .social-media ul.icons {
+            #mobile-footer .social-media ul {
                 margin: 0;
                 padding: 5px;
                 text-align: center;
             }
 
-                #mobile-footer .social-media ul.icons li {
+                #mobile-footer .social-media li {
                     display: inline-block;
                     margin: 0 10px 0 10px;
                 }
 
-                    #mobile-footer .social-media ul.icons li a {
-                        -moz-transition: background-color 0.15s ease-in-out;
-                        -webkit-transition: background-color 0.15s ease-in-out;
-                        -ms-transition: background-color 0.15s ease-in-out;
-                        transition: background-color 0.15s ease-in-out;
+                    #mobile-footer .social-media img {
                         border-radius: 50%;
                         display: block;
-                        width: 60px;
-                        height: 60px;
-                    }
-
-                    #mobile-footer .social-media ul.icons li a:hover {
-                        background: rgba(0, 0, 0, 0.05);
+                        width: 60px; width: 5vh;
+                        height: 60px; height: 5vh;
                     }
 
         #mobile-footer .copyright {
