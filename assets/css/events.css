@@ -63,6 +63,7 @@ a.event {
 @media screen and (max-width: 736px) {
     #events ul {
         padding: 0 16px 0 16px;
+        margin: 6% 0 6% 0;
     }
 
 
@@ -70,30 +71,34 @@ a.event {
         display: block;
         text-decoration: none;
         background-color: #ddd;
-        height: 100px;
+        height: 80px;
     }
 
         a.event img {
-            width: 80px;
+            width: 68px;
+            padding: 6px;
         }
 
         a.event .description {
-            height: 74px;
-            padding: 5px 10px 20px 10px;
+            height: 60px;
+            padding: 4px 10px 20px 5px;
         }
 
             a.event .description h2 {
-                margin: 0 0 5px 0;
-                font-size: 22px;
+                margin: 0 0 2px 0;
+                line-height: 22px;
+                height: 22px;
+                font-size: 18px;
+                font-weight: 400;
             }
 
             a.event .description .location {
-                margin: 5px 0 5px 0;
-                font-size: 16px;
+                margin: 2px 0 2px 0;
+                font-size: 15px;
             }
 
             a.event .description .date {
-                margin: 5px 0 0 0;
-                font-size: 16px;
+                margin: 2px 0 0 0;
+                font-size: 15px;
             }
 }

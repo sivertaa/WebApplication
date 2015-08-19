@@ -259,6 +259,11 @@ footer {
         }
 
 
+    section > h1 {
+        font-size: 20px;
+    }
+
+
     footer .sponsors {
         height: auto;
     }
