@@ -1,4 +1,6 @@
 # WebApplication
+[![Build Status](https://travis-ci.org/cssoc/WebApplication.svg?branch=master)](https://travis-ci.org/cssoc/WebApplication)
+
 The official CSSoc website.
 
 ###Acceptable CSS Units of Measurement
