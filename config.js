@@ -4,8 +4,9 @@ module.exports = {
         appSecret: process.env.FACEBOOK_APP_SECRET,
         accessToken: process.env.FACEBOOK_APP_ID + "|" + process.env.FACEBOOK_APP_SECRET
     },
-    project: {
-    	path: __dirname
+    path: {
+    	root: __dirname,
+        views: __dirname + "/views"
     },
     server: {
         port: process.env.PORT || 3000
