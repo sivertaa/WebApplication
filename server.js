@@ -1,26 +1,14 @@
-var config = require("./config");
-var facebook = require("fb");
 var express = require("express");
+var config = require("./config");
 var app = express();
 
-facebook.setAccessToken(config.facebook.accessToken)
+// Makes the assets directory public.
+app.use("/assets", express.static("assets"));
 
-app.get("/events", function(req, res) {
-    facebook.api("cssoc.man/events", function(data) {
-        if (!data || data.error) {
-            console.log(!data ? "An error has occurred." : data.error);
-            
-            return;
-        }
+// Maps the routes.
+require("./routes")(app, config);
 
-        // Returns the response as json.
-        res.json(data);
-    }, {
-        fields: [ "id", "name", "place", "start_time", "picture"],
-        limit: 140
-    });
-});
-
+// Starts the server.
 var server = app.listen(config.server.port, function() {
     var host = server.address().address;
     var port = server.address().port;
