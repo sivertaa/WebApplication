@@ -1,0 +1,18 @@
+extends ../layout
+
+block append head
+  link(rel="stylesheet", href="assets/css/events.css", type="text/css")
+
+block content
+  section#events
+    h1
+      | Events
+    ul
+      each event in events
+        li
+          a.event(href="https://www.facebook.com/#{event.id}")
+            img(src= event.img)
+            .description
+              h2= event.name
+              p.location= event.location
+              p.date= event.date

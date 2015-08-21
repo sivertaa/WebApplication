@@ -1,5 +1,5 @@
-module.exports = function(app, config) {
+module.exports = function(app) {
     app.get("/gallery", function(req, res) {
-        res.render("gallery", { title: "Computer Science Society" });
+        res.render("gallery");
     });
-}
+};

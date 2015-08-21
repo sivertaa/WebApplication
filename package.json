@@ -11,7 +11,8 @@
     "dependencies": {
         "express": "*",
         "fb": "*",
-        "jade": "*"
+        "jade": "*",
+        "node-cache": "*"
     },
     "private": true,
     "license": "MIT"

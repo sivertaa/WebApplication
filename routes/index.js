@@ -1,9 +1,9 @@
 var fs = require("fs");
 
-module.exports = function(app, config) {
+module.exports = function(app) {
     // Maps the root route.
     app.get("/", function(req, res) {
-        res.render("index", { title: "Computer Science Society" });
+        res.render("index");
     });
 
     // Dynamically includes every route from this directory.
@@ -14,6 +14,6 @@ module.exports = function(app, config) {
 
         var name = file.substr(0, file.indexOf("."));
 
-        require("./" + name)(app, config);
+        require("./" + name)(app);
     });
-}
+};

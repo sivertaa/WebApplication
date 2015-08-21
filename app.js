@@ -9,7 +9,7 @@ app.set("view engine", "jade");
 app.use("/assets", express.static("assets"));
 
 // Maps the routes.
-require("./routes")(app, config);
+require("./routes")(app);
 
 // Starts the server.
 app.listen(config.server.port);
