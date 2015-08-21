@@ -3,7 +3,7 @@ var fs = require("fs");
 module.exports = function(app, config) {
     // Maps the root route.
     app.get("/", function(req, res) {
-        res.render("index");
+        res.render("index", { title: "Computer Science Society" });
     });
 
     // Dynamically includes every route from this directory.

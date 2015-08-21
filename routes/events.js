@@ -5,7 +5,7 @@ module.exports = function(app, config) {
     facebook.setAccessToken(config.facebook.accessToken);
 
     app.get("/events", function(req, res) {
-        res.render("events");
+        res.render("events", { title: "Computer Science Society" });
     });
 
     app.get("/events/json", function(req, res) {

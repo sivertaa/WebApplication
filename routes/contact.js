@@ -1,5 +1,5 @@
 module.exports = function(app, config) {
     app.get("/contact", function(req, res) {
-        res.render("contact");
+        res.render("contact", { title: "Computer Science Society" });
     });
 }

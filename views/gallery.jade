@@ -1,17 +1,6 @@
-doctype html
-html
-  head
-    title
-      | Computer Science Society
-    meta(charset="utf-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1")
-    link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Open+Sans:400,300", type="text/css")
-    link(rel="stylesheet", href="assets/css/style.css")
-  body
-    include partials/desktop-menu
-    include partials/desktop-collapsed-header
-    include partials/mobile-header
-    section#gallery
-      h1
-        | Gallery
-    include partials/footer
+extends layout
+
+block content
+  section#gallery
+    h1
+      | Gallery

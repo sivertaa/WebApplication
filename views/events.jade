@@ -1,41 +1,14 @@
-doctype html
-html
-  head
-    title
-      | Computer Science Society
-    meta(charset="utf-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1")
-    link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Open+Sans:400,300", type="text/css")
-    link(rel="stylesheet", href="assets/css/style.css")
-    link(rel="stylesheet", href="assets/css/events.css")
-  body
-    include partials/desktop-menu
-    include partials/desktop-collapsed-header
-    include partials/mobile-header
-    section#events
-      h1
-        | Events
-      ul
-        li
-          a.event(href="https://www.facebook.com/")
-            img(src="http://www.jpl.nasa.gov/spaceimages/images/mediumsize/PIA17011_ip.jpg")
-            .description
-              h2
-                | Event Name
-              p.location
-                | Location Name
-              p.date
-                | 15 September at 8:30pm
-        li
-          a.event(href="https://www.facebook.com/")
-            img(src="http://www.jpl.nasa.gov/spaceimages/images/mediumsize/PIA17011_ip.jpg")
-            .description
-              h2
-                | Event Name
-              p.location
-                | A Potentially Lengthy Location Name
-              p.date
-                | 15 September at 8:30pm
+extends layout
+
+block append css
+  link(rel="stylesheet", href="assets/css/events.css", type="text/css")
+
+block content
+  section#events
+    h1
+      | Events
+    ul
+      - for (var eventIndex = 0; eventIndex < 10; ++eventIndex)
         li
           a.event(href="https://www.facebook.com/")
             img(src="http://www.jpl.nasa.gov/spaceimages/images/mediumsize/PIA17011_ip.jpg")
@@ -46,44 +19,3 @@ html
                 | Lorem Ipsum Dolor Kilburn Building Lorem Ipsum Dolor Kilburn Building Lorem Ipsum Dolor Kilburn Building
               p.date
                 | 15 September at 8:30pm
-        li
-          a.event(href="https://www.facebook.com/")
-            img(src="http://www.jpl.nasa.gov/spaceimages/images/mediumsize/PIA17011_ip.jpg")
-            .description
-              h2
-                | Event Name
-              p.location
-                | Location Name
-              p.date
-                | 15 September at 8:30pm
-        li
-          a.event(href="https://www.facebook.com/")
-            img(src="http://www.jpl.nasa.gov/spaceimages/images/mediumsize/PIA17011_ip.jpg")
-            .description
-              h2
-                | Event Name
-              p.location
-                | Location Name
-              p.date
-                | 15 September at 8:30pm
-        li
-          a.event(href="https://www.facebook.com/")
-            img(src="http://www.jpl.nasa.gov/spaceimages/images/mediumsize/PIA17011_ip.jpg")
-            .description
-              h2
-                | Event Name
-              p.location
-                | Location Name
-              p.date
-                | 15 September at 8:30pm
-        li
-          a.event(href="https://www.facebook.com/")
-            img(src="http://www.jpl.nasa.gov/spaceimages/images/mediumsize/PIA17011_ip.jpg")
-            .description
-              h2
-                | Event Name
-              p.location
-                | Location Name
-              p.date
-                | 15 September at 8:30pm
-    include partials/footer
