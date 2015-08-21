@@ -5,7 +5,7 @@ module.exports = function(app, config) {
     facebook.setAccessToken(config.facebook.accessToken);
 
     app.get("/events", function(req, res) {
-        res.sendFile(config.path.views + "/events.html");
+        res.render("events");
     });
 
     app.get("/events/json", function(req, res) {

@@ -3,7 +3,7 @@ var fs = require("fs");
 module.exports = function(app, config) {
     // Maps the root route.
     app.get("/", function(req, res) {
-        res.sendFile(config.path.views + "/index.html");
+        res.render("index");
     });
 
     // Dynamically includes every route from this directory.
