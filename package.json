@@ -11,6 +11,9 @@
     "dependencies": {
         "express": "*",
         "fb": "*",
+        "gulp": "*",
+        "gulp-minify-css": "*",
+        "gulp-rename": "*",
         "jade": "*",
         "node-cache": "*"
     },

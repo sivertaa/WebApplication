@@ -1,7 +1,7 @@
 extends ../layout
 
 block append head
-  link(rel="stylesheet", href="assets/css/events.css", type="text/css")
+  link(rel='stylesheet', href='assets/css/events.min.css', type='text/css')
 
 block content
   section#events
@@ -10,7 +10,7 @@ block content
     ul
       each event in events
         li
-          a.event(href="https://www.facebook.com/#{event.id}")
+          a.event(href='https://www.facebook.com/#{event.id}')
             img(src= event.img)
             .description
               h2= event.name

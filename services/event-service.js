@@ -1,35 +1,35 @@
-var facebook = require("fb");
-var NodeCache = require("node-cache");
-var config = require("../config");
-var dateService = require("../services/date-service");
+var facebook = require('fb');
+var NodeCache = require('node-cache');
+var config = require('../config');
+var dateService = require('../services/date-service');
 var cache = new NodeCache();
 
 function queryEvents() {
     // Required to query Facebook.
     facebook.setAccessToken(config.facebook.accessToken);
 
-    facebook.api("cssoc.man/events", function(response) {
+    facebook.api('cssoc.man/events', function(response) {
         if (!response || response.error) {
-            console.log(!response ? "An error has occurred." : response.error);
+            console.log(!response ? 'An error has occurred.' : response.error);
             
             return;
         }
 
         // Parses the response into a more compact format.
-        var events = response["data"].map(function(data) {
+        var events = response['data'].map(function(data) {
             return {
-                id: data["id"],
-                img: data["picture"]["data"]["url"],
-                name: data["name"],
-                location: data["place"] ? data["place"]["name"] : "",
-                date: dateService.parse(data["start_time"])
+                id: data['id'],
+                img: data['picture']['data']['url'],
+                name: data['name'],
+                location: data['place'] ? data['place']['name'] : '',
+                date: dateService.parse(data['start_time'])
             };
         });
 
         // Memorizes the result.
-        cache.set("events", events);
+        cache.set('events', events);
     }, {
-        fields: [ "id", "name", "place", "start_time", "picture"],
+        fields: [ 'id', 'name', 'place', 'start_time', 'picture'],
         limit: config.facebook.query.limit,
         since: config.facebook.query.since
     });
@@ -45,6 +45,6 @@ setInterval(function() {
 
 module.exports = {
     getAll: function() {
-        return { events: cache.get("events") };
+        return { events: cache.get('events') };
     }
 };
