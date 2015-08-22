@@ -1,6 +1,15 @@
 extends ../layout
 
+block append head
+  link(rel='stylesheet', href='assets/css/committee.min.css', type='text/css')
+
 block content
   section#committee
     h1
       | Committee
+    .members
+      each member in members
+        .member(style='background-image: url("assets/images/committee/#{member.img}.webp")')
+          div
+            h2= member.name
+            p= member.description

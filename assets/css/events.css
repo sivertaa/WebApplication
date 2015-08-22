@@ -1,3 +1,4 @@
+/* Desktop */
 a.event {
     display: block;
     text-decoration: none;
@@ -29,7 +30,7 @@ a.event {
         }
 
         a.event .description .location {
-            margin: 15px 0 15px 0;
+            margin: 15px 0;
             height: 22px;
             line-height: 22px;
             font-size: 18px;
@@ -47,23 +48,23 @@ a.event {
         }
 
 
-/* Desktop */
 #events ul {
-    padding: 0 130px 0 130px; padding: 0 18vw 0 18vw;
+    padding: 0 130px; padding: 0 18vw;
     list-style-type: none;
-    margin: 30px 0 30px 0;
+    margin: 30px 0;
 }
 
+
 #events li {
-    margin: 10px 0 10px 0;
+    margin: 10px 0;
 }
 
 
 /* Mobile */
 @media screen and (max-width: 736px) {
     #events ul {
-        padding: 0 16px 0 16px;
-        margin: 6% 0 6% 0;
+        padding: 0 16px;
+        margin: 6% 0;
     }
 
 
@@ -93,7 +94,7 @@ a.event {
             }
 
             a.event .description .location {
-                margin: 2px 0 2px 0;
+                margin: 2px 0;
                 font-size: 15px;
             }
 

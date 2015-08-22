@@ -3,7 +3,7 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 
 gulp.task('minify-css', function() {
-    return gulp.src('assets/css/*.css')
+    return gulp.src(['assets/css/*.css', '!assets/css/*.min.*'])
         .pipe(minifyCss())
         .pipe(rename({
             suffix: '.min'
