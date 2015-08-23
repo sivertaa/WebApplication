@@ -12,6 +12,7 @@
         "express": "*",
         "fb": "*",
         "gulp": "*",
+        "gulp-image-resize": "*",
         "gulp-minify-css": "*",
         "gulp-rename": "*",
         "jade": "*",
