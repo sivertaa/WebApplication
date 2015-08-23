@@ -1,0 +1,24 @@
+{
+    "albums": {
+        "album-1": {
+            "name": "Album 1",
+            "photos": []
+        },
+        "album-2": {
+            "name": "Album 2",
+            "photos": []
+        },
+        "album-3": {
+            "name": "Album 3",
+            "photos": []
+        },
+        "album-4": {
+            "name": "Album 4",
+            "photos": []
+        },
+        "album-5": {
+            "name": "Album 5",
+            "photos": []
+        }
+    }
+}

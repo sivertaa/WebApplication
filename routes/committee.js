@@ -1,7 +1,7 @@
-var members = require('../assets/js/committee/members');
+var committee = require('../assets/json/committee/committee.json');
 
 module.exports = function(app) {
     app.get('/committee', function(req, res) {
-        res.render('committee', members);
+        res.render('committee', committee);
     });
 };

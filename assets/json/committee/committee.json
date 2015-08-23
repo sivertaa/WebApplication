@@ -1,0 +1,28 @@
+{
+    "members": {
+        "sami-alabed": {
+            "name": "Sami Alabed",
+            "description": "Chair"
+        },
+        "shane-booth": {
+            "name": "Shane Booth",
+            "description": "Chair"
+        },
+        "josh-langley": {
+            "name": "Josh Langley",
+            "description": "Secretary"
+        },
+        "mitali-palsikar": {
+            "name": "Mitali Palsikar",
+            "description": "Treasurer"
+        },
+        "andrei-muntean": {
+            "name": "Andrei Muntean",
+            "description": "Dev Officer"
+        },
+        "diana-bite": {
+            "name": "Diana Bite",
+            "description": "Graphics Officer"
+        }
+    }
+}

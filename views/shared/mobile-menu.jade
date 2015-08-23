@@ -1,19 +1,14 @@
 nav#mobile-menu
+  -
+    var menu = [
+        { name: 'Events', tag: 'events' },
+        { name: 'Committee', tag: 'committee' },
+        { name: 'Gallery', tag: 'gallery' },
+        { name: 'Contact', tag: 'contact' }
+    ];
   .aspect-ratio-1-1
     .tiles
-      a(href='events', style='background-image: url("assets/images/index/events.png")')
-        div
-          h2
-            | Events
-      a(href='committee', style='background-image: url("assets/images/index/committee.png")')
-        div
-          h2
-            | Committee
-      a(href='gallery', style='background-image: url("assets/images/index/gallery.png")')
-        div
-          h2
-            | Gallery
-      a(href='contact', style='background-image: url("assets/images/index/contact.png")')
-        div
-          h2
-            | Contact
+      each item in menu
+        a(href='/#{item.tag}', style='background-image: url("/assets/images/index/#{item.tag}.png")')
+          div
+            h2= item.name

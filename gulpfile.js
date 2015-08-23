@@ -67,11 +67,29 @@ gulp.task('create-large-gallery-images', function() {
         .pipe(gulp.dest('assets/images/gallery'));
 });
 
+gulp.task('create-album-thumbnails', function() {
+    // TO-DO.
+});
+
+gulp.task('load-album-photos', function() {
+    // TO-DO.
+});
+
 // Requires ImageMagick to be installed.
 gulp.task('convert-images', [
     'create-small-committee-images',
     'create-small-gallery-images',
-    'create-large-gallery-images'
+    'create-large-gallery-images',
+    'create-album-thumbnails'
 ]);
 
-gulp.task('default', ['minify-css']);
+gulp.task('run-all', [
+    'minify-css',
+    'convert-images',
+    'load-album-photos'
+]);
+
+gulp.task('default', [
+    'minify-css',
+    'load-album-photos'
+]);

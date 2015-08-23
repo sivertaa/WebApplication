@@ -1,6 +1,15 @@
 extends ../layout
 
+block append head
+  link(rel='stylesheet', href='/assets/css/gallery.min.css', type='text/css')
+
 block content
   section#gallery
     h1
       | Gallery
+    .albums
+      each album, tag in albums
+        a.album(href='/gallery/#{tag}')
+          div(style='background-image: url("/assets/images/gallery/#{tag}/_.thumbnail.jpg")')
+            div
+              h2= album.name
