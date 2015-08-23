@@ -67,10 +67,11 @@ gulp.task('create-large-gallery-images', function() {
         .pipe(gulp.dest('assets/images/gallery'));
 });
 
+// Requires ImageMagick to be installed.
 gulp.task('convert-images', [
-	'create-small-committee-images',
-	'create-small-gallery-images',
-	'create-large-gallery-images'
+    'create-small-committee-images',
+    'create-small-gallery-images',
+    'create-large-gallery-images'
 ]);
 
 gulp.task('default', ['minify-css']);
