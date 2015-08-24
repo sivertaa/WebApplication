@@ -1,46 +1,19 @@
 {
     "albums": {
         "album-1": {
-            "name": "Album 1",
-            "photos": [
-                "breaking-bad-crawl-space.jpg",
-                "breakingbad_saymyname.jpg",
-                "large.jpg",
-                "tumblr_m8x5cdKEwl1qg425ho1_1280.jpg",
-                "tumblr_m9cc5xJRnc1qg425ho1_500.jpg",
-                "tumblr_ma9cdnzy9M1qc2flmo1_500.png"
-            ]
+            "name": "Album 1"
         },
         "album-2": {
-            "name": "Album 2",
-            "photos": [
-                "donwoodcover.jpg",
-                "f510422352fce3153704c0ab1e262b75.jpg",
-                "hail_to_the_thief_words_art_radiohead_hd-wallpaper-532824.jpg",
-                "m2007-08Juxtapoz-04.jpg",
-                "n7BRQEe.jpg",
-                "radiohead-3.jpg",
-                "Radiohead-art-for-King-of-001.jpg",
-                "radiohead_poster_by_drunkentramp.jpg"
-            ]
+            "name": "Album 2"
         },
         "album-3": {
-            "name": "Album 3",
-            "photos": [
-                "n7BRQEe.jpg"
-            ]
+            "name": "Album 3"
         },
         "album-4": {
-            "name": "Album 4",
-            "photos": [
-                "breaking-bad-crawl-space.jpg"
-            ]
+            "name": "Album 4"
         },
         "album-5": {
-            "name": "Album 5",
-            "photos": [
-                "radiohead_poster_by_drunkentramp.jpg"
-            ]
+            "name": "Album 5"
         }
     }
 }

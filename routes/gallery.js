@@ -5,10 +5,11 @@ module.exports = function(app) {
         res.render('gallery', gallery);
     });
 
-    app.get('/gallery/:albumTag', function(req, res) {
-    	var albumTag = req.params.albumTag;
-    	var album = gallery.albums[albumTag];
+    app.get('/gallery/:albumId', function(req, res) {
+    	var albumId = req.params.albumId;
+    	var album = gallery.albums[albumId];
 
+    	album.id = albumId;
         res.render('gallery/album', album);
     });
 };

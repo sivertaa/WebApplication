@@ -6,3 +6,15 @@ block append head
 block content
   section#album
     h1= name
+    #desktop-container
+      .scrolling
+        each photo in photos
+          img(src='/assets/images/gallery/#{id}/#{photo}.small.jpg')
+      .display
+        img(src='/assets/images/gallery/#{id}/#{photos[0]}.large.jpg')
+    #mobile-container
+      .display
+        img(src='/assets/images/gallery/#{id}/#{photos[0]}.large.jpg')
+      .scrolling
+        each photo in photos
+          img(src='/assets/images/gallery/#{id}/#{photo}.small.jpg')

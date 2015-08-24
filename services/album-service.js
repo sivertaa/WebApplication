@@ -1,6 +1,17 @@
 var fs = require('fs');
 var galleryPath = './assets/images/gallery/';
 
+function removeExtension(file) {
+    var extensionStartIndex = file.lastIndexOf('.');
+
+    if (extensionStartIndex >= 0) {
+        // Removes the file extension.
+        file = file.substring(0, extensionStartIndex);
+    }
+
+    return file;
+}
+
 function getGallery() {
     return require('../assets/json/gallery/gallery.json');
 }
@@ -22,7 +33,7 @@ module.exports = {
         for (var albumId in gallery.albums) {
             var album = gallery.albums[albumId];
 
-            album.photos = getPhotoPaths(albumId);
+            album.photos = getPhotoPaths(albumId).map(removeExtension);
         }
 
         // Updates the source file.
@@ -39,10 +50,14 @@ module.exports = {
             var albumPath = galleryPath + album + '/';
             var albumPhotos = getPhotoPaths(album);
 
-            // Selects an image at random.
+            if (!albumPhotos || !albumPhotos.length) {
+                throw 'Albums cannot be empty.';
+            }
+
+            // Randomly selects a photo.
             var photo = albumPhotos[Math.floor(Math.random() * albumPhotos.length)];
 
-            // Creates the thumbnail as a copy of this image.
+            // Creates the thumbnail as a copy of this photo.
             fs.createReadStream(albumPath + photo)
                 .pipe(fs.createWriteStream(albumPath + '_.thumbnail.jpg'));
         });
