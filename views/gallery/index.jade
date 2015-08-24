@@ -8,8 +8,8 @@ block content
     h1
       | Gallery
     .albums
-      each album, tag in albums
-        a.album(href='/gallery/#{tag}')
-          div(style='background-image: url("/assets/images/gallery/#{tag}/_.thumbnail.jpg")')
+      each album, id in albums
+        a.album(href='/gallery/#{id}')
+          div(style='background-image: url("/assets/images/gallery/#{id}/_.thumbnail.jpg")')
             div
               h2= album.name
