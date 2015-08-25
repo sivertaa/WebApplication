@@ -1,28 +1,34 @@
 {
-    "members": {
-        "sami-alabed": {
+    "members": [
+        {
+            "id": "sami-alabed",
             "name": "Sami Alabed",
             "description": "Chair"
         },
-        "shane-booth": {
+        {
+            "id": "shane-booth",
             "name": "Shane Booth",
             "description": "Chair"
         },
-        "josh-langley": {
+        {
+            "id": "josh-langley",
             "name": "Josh Langley",
             "description": "Secretary"
         },
-        "mitali-palsikar": {
+        {
+            "id": "mitali-palsikar",
             "name": "Mitali Palsikar",
             "description": "Treasurer"
         },
-        "andrei-muntean": {
+        {
+            "id": "andrei-muntean",
             "name": "Andrei Muntean",
             "description": "Dev Officer"
         },
-        "diana-bite": {
+        {
+            "id": "diana-bite",
             "name": "Diana Bite",
             "description": "Graphics Officer"
         }
-    }
+    ]
 }

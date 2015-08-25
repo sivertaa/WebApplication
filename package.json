@@ -15,8 +15,7 @@
         "gulp-image-resize": "*",
         "gulp-minify-css": "*",
         "gulp-rename": "*",
-        "jade": "*",
-        "node-cache": "*"
+        "jade": "*"
     },
     "private": true,
     "license": "MIT"

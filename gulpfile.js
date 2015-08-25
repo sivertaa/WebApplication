@@ -40,10 +40,6 @@ gulp.task('create-small-committee-images', function() {
         .pipe(gulp.dest('assets/images/committee'));
 });
 
-gulp.task('load-album-photos', function() {
-    albumService.loadPhotos();
-});
-
 gulp.task('assign-album-thumbnails', function() {
     albumService.assignThumbnails();
 });
@@ -101,7 +97,6 @@ gulp.task('create-large-gallery-images', function() {
 });
 
 gulp.task('generate-gallery', [
-    'load-album-photos',
     'assign-album-thumbnails',
     'format-album-thumbnails',
     'create-small-gallery-images',

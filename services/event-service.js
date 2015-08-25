@@ -1,8 +1,7 @@
 var facebook = require('fb');
-var NodeCache = require('node-cache');
 var config = require('../config');
 var dateService = require('../services/date-service');
-var cache = new NodeCache();
+var events = [];
 
 function queryEvents() {
     // Required to query Facebook.
@@ -16,7 +15,7 @@ function queryEvents() {
         }
 
         // Parses the response into a more compact format.
-        var events = response['data'].map(function(data) {
+        return response['data'].map(function(data) {
             return {
                 id: data['id'],
                 img: data['picture']['data']['url'],
@@ -25,9 +24,6 @@ function queryEvents() {
                 date: dateService.parse(data['start_time'])
             };
         });
-
-        // Memorizes the result.
-        cache.set('events', events);
     }, {
         fields: [ 'id', 'name', 'place', 'start_time', 'picture'],
         limit: config.facebook.query.limit,
@@ -45,6 +41,6 @@ setInterval(function() {
 
 module.exports = {
     getAll: function() {
-        return { events: cache.get('events') };
+        return { 'events': events };
     }
 };

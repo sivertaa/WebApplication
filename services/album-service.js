@@ -1,5 +1,6 @@
 var fs = require('fs');
 var galleryPath = './assets/images/gallery/';
+var albums = loadAlbums();
 
 function removeExtension(file) {
     var extensionStartIndex = file.lastIndexOf('.');
@@ -12,43 +13,121 @@ function removeExtension(file) {
     return file;
 }
 
-function getGallery() {
-    return require('../assets/json/gallery/gallery.json');
-}
-
 // Gets a list of every photo in an album.
-function getPhotoPaths(albumId) {
+function getPhotoFileNames(albumId) {
     return fs.readdirSync(galleryPath + albumId)
-        .filter(function(photo) {
-            // Eliminates photos with '*.*.*' names.
-            return photo.replace('.', '').length
-                - photo.replace('.', '').replace('.', '').length == 0;
+        .filter(function(file) {
+            // Eliminates files with '*.*.*' names.
+            return file.replace('.', '').length
+                - file.replace('.', '').replace('.', '').length == 0;
         });
 }
 
-module.exports = {
-    loadPhotos: function() {
-        var gallery = getGallery();
+function getPhotoIds(albumId) {
+    return getPhotoFileNames(albumId).map(removeExtension);
+}
 
-        for (var albumId in gallery.albums) {
-            var album = gallery.albums[albumId];
+// Gets a list of every album in the gallery. The id coincides with the directory name.
+function getAlbumIds() {
+    return fs.readdirSync(galleryPath)
+        .filter(function(file) {
+            return fs.statSync(galleryPath + file).isDirectory();
+        });
+}
 
-            album.photos = getPhotoPaths(albumId).map(removeExtension);
+function getAlbumConfig(albumId) {
+    var albumConfigPath = galleryPath + albumId + '/.config.json';
+
+    try {
+        return require('.' + albumConfigPath);
+    } catch (error) {
+        // This album does not have a config file. Return an empty object.
+        return {}; 
+    }
+}
+
+// Loads the albums from the gallery directory.
+function loadAlbums() {
+    var albums = {};
+    var albumIds = getAlbumIds();
+
+    // Populates the 'albums' dictionary.
+    albumIds.forEach(function(albumId) {
+        albums[albumId] = getAlbumConfig(albumId);
+    });
+
+    albums = fillEmptyProperties(albums);
+
+    return sortAlbums(albums);
+}
+
+// Writes default values in empty properties.
+function fillEmptyProperties(albums) {
+    // Creates a deep copy of 'albums' to prevent side effects.
+    var formattedAlbums = JSON.parse(JSON.stringify(albums));
+
+    for (var albumId in formattedAlbums) {
+        var album = formattedAlbums[albumId];
+
+        album.id = albumId;
+
+        if (!album.hasOwnProperty('name')) {
+            album.name = albumId;
         }
 
-        // Updates the source file.
-        fs.writeFile('assets/json/gallery/gallery.json', JSON.stringify(gallery, null, 4));
+        if (!album.hasOwnProperty('date')) {
+            album.date = Date.now();
+        }
+
+        album.photos = getPhotoIds(albumId);
+    }
+
+    return formattedAlbums;
+}
+
+// Sorts the albums by date in descending order.
+function sortAlbums(albums) {
+    var sortedAlbums = {};
+    var albumIdDatePairs = [];
+
+    // Maps the albums to a list of id-date pairs.
+    for (var albumId in albums) {
+        albumIdDatePairs[albumIdDatePairs.length] = {
+            id: albumId,
+            date: albums[albumId].date
+        };
+    }
+
+    // Sorts the id-date pairs by date in descending order.
+    albumIdDatePairs.sort(function(firstPair, secondPair) {
+        return new Date(firstPair.date) < new Date(secondPair.date);
+    });
+
+    // Populates the dictionary of sorted albums.
+    albumIdDatePairs.forEach(function(pair) {
+        sortedAlbums[pair.id] = albums[pair.id];
+    });
+
+    return sortedAlbums;
+}
+
+module.exports = {
+    getAll: function() {
+        return { 'albums': albums };
+    },
+    get: function(albumId) {
+        return albums[albumId];
     },
     assignThumbnails: function() {
         // Gets all albums which do not have a thumbnail.
         var albumsWithoutThumbnails = fs.readdirSync('./assets/images/gallery')
-            .filter(function(album) {
-                return !fs.existsSync(galleryPath + album + '/_.thumbnail.jpg');
+            .filter(function(albumId) {
+                return !fs.existsSync(galleryPath + albumId + '/_.thumbnail.jpg');
             });
 
-        albumsWithoutThumbnails.forEach(function(album) {
-            var albumPath = galleryPath + album + '/';
-            var albumPhotos = getPhotoPaths(album);
+        albumsWithoutThumbnails.forEach(function(albumId) {
+            var albumPath = galleryPath + albumId + '/';
+            var albumPhotos = getPhotoFileNames(albumId);
 
             if (!albumPhotos || !albumPhotos.length) {
                 throw 'Albums cannot be empty.';
