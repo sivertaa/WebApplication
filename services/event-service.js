@@ -15,7 +15,7 @@ function queryEvents() {
         }
 
         // Parses the response into a more compact format.
-        return response['data'].map(function(data) {
+        events = response['data'].map(function(data) {
             return {
                 id: data['id'],
                 img: data['picture']['data']['url'],
