@@ -18,6 +18,7 @@ a.event {
         height: 104px;
         padding: 16px 10px 20px 10px;
         white-space: nowrap;
+        text-align: left;
     }
 
         a.event .description h2 {
