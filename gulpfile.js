@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var imageResize = require('gulp-image-resize');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
 var albumService = require('./services/album-service');
 
 // Error handling.
@@ -19,6 +20,15 @@ gulp.task('minify-css', function() {
             suffix: '.min'
         }))
         .pipe(gulp.dest('assets/css'));
+});
+
+gulp.task('minify-js', function() {
+    return gulp.src(['assets/js/*.js', '!assets/js/*.min.*'])
+        .pipe(uglify())
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest('assets/js'));
 });
 
 gulp.task('create-small-committee-images', function() {
@@ -105,6 +115,7 @@ gulp.task('generate-gallery', [
 
 gulp.task('default', [
     'minify-css',
+    'minify-js',
     'create-small-committee-images',
     'generate-gallery'
 ]);
