@@ -19,6 +19,7 @@
             display: block;
             width: 100%;
             padding: 1px 0;
+            cursor: pointer;
         }
 
     #desktop-container .display {

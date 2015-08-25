@@ -11,6 +11,8 @@ The official CSSoc website.
   * vw, vh
     * Always include px as well (to support ancient browsers) like so:
       * `height: 75px; height: 8vh;`
+  * em
+    * Only for input forms.
 
 ### Image Sizes
   * Maximum height of sponsor logo: **140px**.

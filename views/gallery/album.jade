@@ -18,4 +18,6 @@ block content
       .scrolling
         each photo in photos
           img(onclick='selectPhoto(\'#{id}\', \'#{photo}\')' src='/assets/images/gallery/#{id}/#{photo}.small.jpg')
-    script(type='text/javascript' src='/assets/js/gallery.min.js')
+
+block append scripts
+  script(type='text/javascript' src='/assets/js/gallery.min.js')
