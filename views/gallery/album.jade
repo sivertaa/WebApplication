@@ -9,7 +9,7 @@ block content
     #desktop-container
       .scrolling
         each photo in photos
-          img(onclick='selectPhoto("#{id}", "#{photo}")' src='/assets/images/gallery/#{id}/#{photo}.small.jpg')
+          img(onclick='selectPhoto(\'#{id}\', \'#{photo}\')' src='/assets/images/gallery/#{id}/#{photo}.small.jpg')
       .display
         img#desktop-photo(src='/assets/images/gallery/#{id}/#{photos[0]}.large.jpg')
     #mobile-container
@@ -17,5 +17,5 @@ block content
         img#mobile-photo(src='/assets/images/gallery/#{id}/#{photos[0]}.large.jpg')
       .scrolling
         each photo in photos
-          img(onclick='selectPhoto("#{id}", "#{photo}")' src='/assets/images/gallery/#{id}/#{photo}.small.jpg')
+          img(onclick='selectPhoto(\'#{id}\', \'#{photo}\')' src='/assets/images/gallery/#{id}/#{photo}.small.jpg')
     script(type='text/javascript' src='/assets/js/gallery.min.js')
