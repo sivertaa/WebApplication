@@ -47,7 +47,7 @@
 
 
     #mobile-menu {
-        background-color: #203;
+        background-color: #33004D;
         display: inherit;
         padding: 6% 0;
     }
@@ -71,7 +71,7 @@
         .tiles div {
             height: 20%;
             top: 80%;
-            background-color: #33004D;
+            background-color: #4D0073;
             position: relative;
         }
 
