@@ -1,8 +1,6 @@
 /* Desktop */
 .members {
-    padding: 0 130px; padding: 0 14vw;
-    margin: 30px 0;
-    text-align: center;
+    padding: 30px 130px; padding: 30px 14vw;
 }
 
 
@@ -48,8 +46,7 @@
 /* Mobile */
 @media screen and (max-width: 736px) {
     .members {
-        padding: 0 6px;
-        margin-top: 0;
+        padding: 30px 6px;
     }
 
 

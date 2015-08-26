@@ -1,8 +1,8 @@
+/* Desktop */
 #desktop-container {
     display: inherit;
     padding: 0 130px; padding: 0 14vw;
     margin: 30px 0;
-    text-align: center;
     height: 700px;
 }
 
@@ -59,7 +59,6 @@
         #mobile-container .display {
             background-color: #ddd;
             height: 250px; height: 40vh;
-            text-align: center;
             font-size: 0;
             padding: 1%;
         }

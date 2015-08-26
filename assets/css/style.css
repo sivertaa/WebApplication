@@ -2,6 +2,11 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     margin: 0;
+    background-color: #000;
+}
+
+a {
+    text-decoration: none;
 }
 
 
@@ -17,18 +22,20 @@ h2, h3, h4, h5, h6, p {
 
 section {
     text-align: center;
+    background-color: #fff;
+    padding: 30px 0;
 }
 
     section > h1 {
-        text-align: center;
         font-size: 32px;
+        margin: 0;
     }
 
 
 .aspect-ratio-1-1 {
     display: block;
     position: relative;
-    padding-top: 100%; /* 15% padding would mean 15:85 */
+    padding-top: 100%; /* 15% padding would mean 15:85. */
 }
 
     .aspect-ratio-1-1 > div {
@@ -63,27 +70,34 @@ section {
         margin: 0 20px;
     }
 
+    #desktop-menu a {
+        color: #fff;
+    }
+
 
 #desktop-header {
-    margin: 0;
-    background-image: url("images/overlay.png"), url("../images/header.jpg");
+    /*
+    background: url("images/overlay.png"), url("images/header.jpg");
     background-size: auto, cover;
     background-position: top left, center center;
     background-repeat: repeat, no-repeat;
+    */
+    background-color: #406;
     padding: 230px 0; padding: 17vh 0 14vh 0;
     text-align: center;
-    color: #fff;
 }
 
     #desktop-header h1 {
         font-size: 36px;
         line-height: 30px;
         margin: 0 20px 20px 20px;
+        color: #fff;
     }
 
     #desktop-header h2 {
         font-size: 25px;
         margin: 10px;
+        color: #fff;
     }
 
 
@@ -92,30 +106,33 @@ footer {
 }
 
     footer .sponsors {
-        background-color: #ccc;
-        height: 135px; height: 15vh;
+        background-color: #f5f5f5;
+        height: 150px; height: 15vh;
     }
                 
         footer .sponsors ul {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
             margin: 0;
-            padding: 16px; padding: 2vh;
+            padding: 0;
+            height: 100%;
             text-align: center;
-            overflow: hidden;
             white-space: nowrap;
         }
 
         footer .sponsors li {
             display: inline-block;
-            padding: 0 20px;
+            padding: 20px; padding: 2vh;
         }
 
         footer .sponsors img {
-            max-height: 100px; max-height: 11vh;
+            max-height: 110px; max-height: 11vh;
             max-width: 100%;
         }
 
     footer .social-media {
-        background-color: #aaa;
+        background-color: #ebebeb;
         height: 70px; height: 7vh;
     }
 
@@ -138,8 +155,8 @@ footer {
 
     footer .copyright {
         text-align: center;
-        background-color: black;
-        color: white;
+        color: #fff;
+        background-color: #000;
         font-size: 14px;
         line-height: 30px; line-height: 3vh;
     }
@@ -162,11 +179,19 @@ footer {
     }
 
 
+    section {
+        padding: 30px 0 10px 0;
+    }
+
+        section > h1 {
+            font-size: 20px;
+        }
+
+
     #mobile-header {
         display: inherit;
         height: 70px;
-        color: #fff;
-        background-color: #6b2c90;
+        background-color: #609;
     }
 
         #mobile-header img {
@@ -180,12 +205,8 @@ footer {
             margin: 0;
             font-size: 18px;
             line-height: 70px;
+            color: #fff;
         }
-
-
-    section > h1 {
-        font-size: 20px;
-    }
 
 
     footer .sponsors {
@@ -227,10 +248,6 @@ footer {
 
 
     footer .copyright {
-        text-align: center;
-        background-color: black;
-        color: white;
-        font-size: 14px;
         line-height: 30px;
     }
 }

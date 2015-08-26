@@ -4,8 +4,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
-    padding: 0 130px;
-    margin: 0 0 20px 0;
+    padding: 30px 130px;
     width: 100%;
     max-width: 1000px;
 }
@@ -36,7 +35,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: block;
-    box-shadow: inset 0 0 0 1px #ccc;
+    box-shadow: inset 0 0 0 1px #e1e1e1;
     background: #f5f5f5;
     width: 100%;
     padding: 0.85em 1em;
@@ -66,7 +65,7 @@
         max-width: 100%;
         border-radius: 0.25em;
         border: 0;
-        box-shadow: inset 0 0 0 1px #ccc;
+        box-shadow: inset 0 0 0 1px #e1e1e1;
         background: #f5f5f5;
         padding: 0.85em 1em;
         font-family: inherit;
@@ -80,30 +79,27 @@
 
 
 .actions {
-    margin: 10px;
+    margin-top: 20px;
 }
 
     .actions ul {
-        text-align: center;
         padding: 0;
         margin: 0;
     }
 
     .actions li {
         display: inline-block;
-        margin: 10px 20px;
+        margin: 0px 20px;
     }
 
     .actions input {
         position: relative;
-        display: inline-block;
         background: #3d3d3d;
         padding: 0.85em 3em 0.85em 3em;
         border-radius: 0.25em;
         cursor: pointer;
         border: 0;
         color: #fff;
-        text-align: center;
         font-size: 13px;
     }
 
@@ -113,7 +109,7 @@
 
         .actions input.reset-button {
             color: inherit;
-            box-shadow: inset 0 0 0 1px #e6e6e6;
+            box-shadow: inset 0 0 0 1px #e1e1e1;
             background: none;
         }
 
@@ -125,8 +121,7 @@
 /* Mobile */
 @media screen and (max-width: 736px) {
     .contact-form {
-        padding: 0 6px;
-        margin-top: 0;
+        padding: 30px 6px;
     }
 
 
@@ -149,22 +144,19 @@
     }
 
 
-    .actions {
-        margin: 10px 0;
+    .actions ul {
+        text-align: center;
+        padding: 0;
+        margin: 0;
     }
 
-        .actions ul {
-            text-align: center;
-            padding: 0;
-            margin: 0;
-        }
 
-        .actions li {
-            display: inline-block;
-            margin: 0 8px;
-        }
+    .actions li {
+        margin: 0 8px;
+    }
 
-        .actions input {
-            font-size: 11px;
-        }
+
+    .actions input {
+        font-size: 11px;
+    }
 }

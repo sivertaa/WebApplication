@@ -15,7 +15,7 @@ The official CSSoc website.
     * Only for input forms.
 
 ### Image Sizes
-  * Maximum height of sponsor logo: **140px**.
+  * Maximum height of sponsor logo: **120px**.
   * Social media icons: **60px × 60px**.
   * Header icon: **50px × 50px**.
 
