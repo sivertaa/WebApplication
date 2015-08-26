@@ -133,24 +133,24 @@ footer {
 
     footer .social-media {
         background-color: #ebebeb;
-        height: 70px; height: 7vh;
+        height: 65px; height: 6.5vh;
     }
 
         footer .social-media ul {
             margin: 0;
-            padding: 5px; padding: 1vh;
+            padding: 10px; padding: 1vh;
             text-align: center;
         }
 
         footer .social-media li {
             display: inline-block;
-            margin: 0 12px;
+            margin: 0 16px;
         }
 
         footer .social-media img {
             border-radius: 50%;
-            width: 60px; width: 5vh;
-            height: 60px; height: 5vh;
+            width: 45px; width: 4.5vh;
+            height: 45px; height: 4.5vh;
         }
 
     footer .copyright {
@@ -234,16 +234,16 @@ footer {
 
         footer .social-media ul {
             margin: 0;
-            padding: 5px;
+            padding: 7px 0;
         }
 
         footer .social-media li {
-            margin: 0 10px;
+            margin: 0 14px;
         }
 
         footer .social-media img {
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
         }
 
 

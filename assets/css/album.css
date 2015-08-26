@@ -1,8 +1,7 @@
 /* Desktop */
 #desktop-container {
     display: inherit;
-    padding: 0 130px; padding: 0 14vw;
-    margin: 30px 0;
+    padding: 30px 130px; padding: 30px 14vw;
     height: 700px;
 }
 
@@ -53,11 +52,11 @@
 
     #mobile-container {
         display: inherit;
-        margin-bottom: 20px;
+        padding: 30px 0;
     }
 
         #mobile-container .display {
-            background-color: #ddd;
+            background-color: #000;
             height: 250px; height: 40vh;
             font-size: 0;
             padding: 1%;
@@ -69,7 +68,7 @@
             }
 
         #mobile-container .scrolling {
-            background-color: #ccc;
+            background-color: #000;
             overflow-x: scroll;
             overflow-y: hidden;
             white-space: nowrap;
