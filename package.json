@@ -9,6 +9,7 @@
         "url": "https://github.com/cssoc/WebApplication"
     },
     "dependencies": {
+        "body-parser": "*",
         "express": "*",
         "fb": "*",
         "gulp": "*",

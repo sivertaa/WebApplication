@@ -14,14 +14,14 @@ block content
       form(method='post', action='#')
         .user-details
           .user-name
-            input(type='text', placeholder='Name')
+            input(type='text', name='name', placeholder='Name')
           .user-email
-            input(type='text', placeholder='Email')
+            input(type='text', name='email', placeholder='Email')
         .message
           textarea(name='message', placeholder='Message')
         .actions
           ul
             li
-              input(type='submit', class='submit-button' value='Send Message')
+              input.submit-button(type='submit', value='Send Message')
             li
-              input(type='reset', class='reset-button' value='Clear Form')
+              input.reset-button(type='reset', value='Clear Form')

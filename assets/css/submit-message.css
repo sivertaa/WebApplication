@@ -1,0 +1,20 @@
+/* Desktop */
+.submission-response {
+    padding: 30px 130px;
+}
+
+    .submission-response p {
+        font-size: 16px;
+    }
+
+
+/* Mobile */
+@media screen and (max-width: 736px) {
+    .submission-response {
+        padding: 30px 16px;
+    }
+
+        .submission-response p {
+            font-size: 15px;
+        }
+}
