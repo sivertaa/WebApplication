@@ -12,7 +12,7 @@ block content
       | Events
     ul
       each event in events
-        li
+        li(class= event.upcoming ? 'upcoming' : '')
           a.event(href='https://www.facebook.com/#{event.id}')
             img(src= event.img)
             .description

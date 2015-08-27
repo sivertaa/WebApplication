@@ -1,9 +1,10 @@
 var fs = require('fs');
+var eventService = require('../services/event-service');
 
 module.exports = function(app) {
     // Maps the root route.
     app.get('/', function(req, res) {
-        res.render('index');
+        res.render('index', eventService.getUpcoming());
     });
 
     // Dynamically includes every route from this directory.

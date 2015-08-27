@@ -3,6 +3,20 @@ var config = require('../config');
 var dateService = require('../services/date-service');
 var events = [];
 
+// Parses the response into a more compact format.
+function getEventsFromResponse(response) {
+    return response['data'].map(function(data) {
+        return {
+            id: data['id'],
+            img: data['picture']['data']['url'],
+            name: data['name'],
+            location: data['place'] ? data['place']['name'] : '',
+            date: dateService.parse(data['start_time']),
+            upcoming: new Date(data['start_time']) > Date.now()
+        };
+    });
+}
+
 function queryEvents() {
     // Required to query Facebook.
     facebook.setAccessToken(config.facebook.accessToken);
@@ -14,20 +28,21 @@ function queryEvents() {
             return;
         }
 
-        // Parses the response into a more compact format.
-        events = response['data'].map(function(data) {
-            return {
-                id: data['id'],
-                img: data['picture']['data']['url'],
-                name: data['name'],
-                location: data['place'] ? data['place']['name'] : '',
-                date: dateService.parse(data['start_time'])
-            };
-        });
+        events = getEventsFromResponse(response);
     }, {
         fields: [ 'id', 'name', 'place', 'start_time', 'picture'],
         limit: config.facebook.query.limit,
         since: config.facebook.query.since
+    });
+}
+
+function getFutureEvents() {
+    if (!events || !events.length) {
+        return [];
+    }
+
+    return events.filter(function(event) {
+        return event.upcoming;
     });
 }
 
@@ -42,5 +57,14 @@ setInterval(function() {
 module.exports = {
     getAll: function() {
         return { 'events': events };
+    },
+    getUpcoming: function() {
+        var futureEvents = getFutureEvents();
+
+        if (!futureEvents.length) {
+            return {};
+        }
+
+        return { 'event': futureEvents[futureEvents.length - 1] };
     }
 };
