@@ -10,6 +10,10 @@
     margin: 10px 0;
 }
 
+    #events li:first-child {
+        margin: 0;
+    }
+
 
 a.event {
     display: block;
@@ -69,7 +73,7 @@ a.event {
 /* Mobile */
 @media screen and (max-width: 736px) {
     #events ul {
-        padding: 6% 16px;
+        padding: 30px 16px;
     }
 
 

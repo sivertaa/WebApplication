@@ -10,11 +10,12 @@ block content
   section#album
     h1= name
     #desktop-container
-      .scrolling
-        each photo in photos
-          img(onclick='selectPhoto(\'#{id}\', \'#{photo}\')' src='/assets/images/gallery/#{id}/#{photo}.small.jpg')
-      .display
-        img#desktop-photo(src='/assets/images/gallery/#{id}/#{photos[0]}.large.jpg')
+      .wrapped-container
+        .scrolling
+          each photo in photos
+            img(onclick='selectPhoto(\'#{id}\', \'#{photo}\')' src='/assets/images/gallery/#{id}/#{photo}.small.jpg')
+        .display
+          img#desktop-photo(src='/assets/images/gallery/#{id}/#{photos[0]}.large.jpg')
     #mobile-container
       .display
         img#mobile-photo(src='/assets/images/gallery/#{id}/#{photos[0]}.large.jpg')

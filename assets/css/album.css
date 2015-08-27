@@ -2,8 +2,13 @@
 #desktop-container {
     display: inherit;
     padding: 30px 130px; padding: 30px 14vw;
-    height: 700px;
 }
+
+    #desktop-container .wrapped-container {
+        height: 700px;
+        background-color: #000;
+        padding: 2px;
+    }
 
     #desktop-container .scrolling {
         display: inline-block;
@@ -11,15 +16,22 @@
         height: 100%;
         overflow-x: hidden;
         overflow-y: scroll;
-        white-space: nowrap;
     }
 
         #desktop-container .scrolling img {
             display: block;
             width: 100%;
-            padding: 1px 0;
+            margin: 2px 0;
             cursor: pointer;
         }
+
+            #desktop-container .scrolling img:first-child {
+                margin-top: 0;
+            }
+
+            #desktop-container .scrolling img:last-child {
+                margin-bottom: 0;
+            }
 
     #desktop-container .display {
         display: inline-block;
@@ -32,9 +44,8 @@
         #desktop-container .display img {
             display: block;
             position: absolute;
-            max-width: 99%;
+            max-width: 100%;
             max-height: 700px;
-            margin: 0 0.5%;
         }
 
 
@@ -59,11 +70,14 @@
             background-color: #000;
             height: 250px; height: 40vh;
             font-size: 0;
-            padding: 1%;
+            padding: 3px;
         }
 
             #mobile-container .display img {
-                max-width: 98%;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                max-width: 100%;
                 max-height: 250px; max-height: 40vh;
             }
 
