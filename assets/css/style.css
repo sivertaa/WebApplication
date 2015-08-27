@@ -189,7 +189,7 @@ footer {
 
 
     #mobile-header {
-        display: inherit;
+        display: block;
         height: 70px;
         background-color: #609;
     }
