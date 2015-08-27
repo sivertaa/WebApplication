@@ -30,7 +30,7 @@ function queryEvents() {
 
         events = getEventsFromResponse(response);
     }, {
-        fields: [ 'id', 'name', 'place', 'start_time', 'picture'],
+        fields: [ 'id', 'name', 'place', 'start_time', 'picture' ],
         limit: config.facebook.query.limit,
         since: config.facebook.query.since
     });

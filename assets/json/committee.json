@@ -29,6 +29,11 @@
             "id": "diana-bite",
             "name": "Diana Bite",
             "description": "Graphics Officer"
+        },
+        {
+            "id": "razvan-dutescu",
+            "name": "Razvan Dutescu",
+            "description": "Ball Officer"
         }
     ]
 }
