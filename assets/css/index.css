@@ -62,9 +62,10 @@
             width: 48%;
             height: 48%;
             margin: 1%;
-            background-size: 100%;
             background-color: #609;
-            text-decoration: none;
+            background-size: 50%;
+            background-position: 50% 30%;
+            background-repeat: no-repeat;
             float: left;
         }
 
