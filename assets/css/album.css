@@ -42,11 +42,48 @@
     }
 
         #desktop-container .display img {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
             display: block;
             position: absolute;
             max-width: 100%;
             max-height: 700px;
+            padding-left: 2px;
         }
+
+
+.display .left, .display .right {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: absolute;
+    width: 50%;
+    height: 700px;
+    cursor: pointer;
+}
+
+    .display .left:hover {
+        background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.2));
+        background: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.2));
+        background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.2));
+        background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.2));
+    }
+
+    .display .right:hover {
+        background: -moz-linear-gradient(right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.2));
+        background: -o-linear-gradient(right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.2));
+        background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.2));
+        background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.2));
+    }
+
+
+.display .right {
+    left: 50%;
+}
 
 
 #mobile-container {
@@ -67,10 +104,12 @@
     }
 
         #mobile-container .display {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
             background-color: #000;
             height: 250px; height: 40vh;
             font-size: 0;
-            padding: 3px;
         }
 
             #mobile-container .display img {
@@ -79,6 +118,7 @@
                 box-sizing: border-box;
                 max-width: 100%;
                 max-height: 250px; max-height: 40vh;
+                margin: 3px;
             }
 
         #mobile-container .scrolling {
@@ -94,4 +134,9 @@
                 height: 90px;
                 margin: 0 1px;
             }
+
+
+    .display .left, .display .right {
+        height: 40vh;
+    }
 }

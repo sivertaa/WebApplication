@@ -13,15 +13,21 @@ block content
       .wrapped-container
         .scrolling
           each photo in photos
-            img(onclick='selectPhoto(\'#{id}\', \'#{photo}\')' src='/assets/images/gallery/#{id}/#{photo}.small.jpg')
+            img(onclick='selectPhoto(\'#{photo}\')' src='/assets/images/gallery/#{id}/#{photo}.small.jpg')
         .display
-          img#desktop-photo(src='/assets/images/gallery/#{id}/#{photos[0]}.large.jpg')
+          img#desktop-photo
+          .left(onclick='selectPrevious()')
+          .right(onclick='selectNext()')
     #mobile-container
       .display
-        img#mobile-photo(src='/assets/images/gallery/#{id}/#{photos[0]}.large.jpg')
+        .left(onclick='selectPrevious()')
+        .right(onclick='selectNext()')
+        img#mobile-photo
       .scrolling
         each photo in photos
-          img(onclick='selectPhoto(\'#{id}\', \'#{photo}\')' src='/assets/images/gallery/#{id}/#{photo}.small.jpg')
+          img(onclick='selectPhoto(\'#{photo}\')' src='/assets/images/gallery/#{id}/#{photo}.small.jpg')
 
 block append scripts
-  script(type='text/javascript' src='/assets/js/gallery.min.js')
+  script(type='text/javascript' src='/assets/js/album.min.js')
+  script.
+    initialize('#{id}', !{JSON.stringify(photos)});

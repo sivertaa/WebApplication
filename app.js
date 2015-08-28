@@ -6,6 +6,9 @@ var app = express();
 // Enables support for urlencoded POST requests.
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// Sets the directory of this file as the root.
+app.locals.basedir = __dirname;
+
 // Sets Jade as the template engine.
 app.set('view engine', 'jade');
 
