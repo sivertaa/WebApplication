@@ -8,13 +8,27 @@ function toDoubleDigits(value) {
 function toTwelveHourNotation(hours, minutes) {
     minutes = toDoubleDigits(minutes);
 
-    return hours < 12 ? hours + ':' + minutes + 'am'
-        : (hours - 12) + ':' + minutes + 'pm';
+    if (hours < 12) {
+        return hours == 0 ? '12:' + minutes + 'am'
+            : hours + ':' + minutes + 'am';
+    } else {
+        return hours == 12 ? '12:' + minutes + 'pm'
+            : hours % 12 + ':' + minutes + 'pm';
+    }
+}
+
+// Perhaps there is a more elegant method that does this.
+function toEnglishTime(date) {
+    var englishDate = new Date(date);
+
+    englishDate.setHours(date.getHours() + 1);
+
+    return englishDate;
 }
 
 module.exports = {
     parse: function(dateAsString) {
-        var date = new Date(dateAsString);
+        var date = toEnglishTime(new Date(dateAsString));
 
         return date.getDate() + ' ' + months[date.getMonth()] + ' at '
             + toTwelveHourNotation(date.getHours(), date.getMinutes());
