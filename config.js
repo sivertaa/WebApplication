@@ -9,6 +9,10 @@ module.exports = {
             interval: 30 // In minutes.
         }
     },
+    sendGrid: {
+        username: process.env.SENDGRID_USERNAME,
+        password: process.env.SENDGRID_PASSWORD
+    },
     server: {
         port: process.env.PORT || 3000
     }
