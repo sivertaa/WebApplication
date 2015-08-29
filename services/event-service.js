@@ -10,7 +10,7 @@ function getEventsFromResponse(response) {
             id: data['id'],
             img: data['picture']['data']['url'],
             name: data['name'],
-            location: data['place'] ? data['place']['name'] : '',
+            location: data['location'] ? data['location'] : '',
             date: dateService.parse(data['start_time']),
             upcoming: new Date(data['start_time']) > Date.now()
         };
@@ -21,7 +21,7 @@ function queryEvents() {
     // Required to query Facebook.
     facebook.setAccessToken(config.facebook.accessToken);
 
-    facebook.api('cssoc.man/events', function(response) {
+    facebook.api('954776951241538/events', function(response) {
         if (!response || response.error) {
             console.log(!response ? 'An error has occurred.' : response.error);
             
@@ -30,7 +30,7 @@ function queryEvents() {
 
         events = getEventsFromResponse(response);
     }, {
-        fields: [ 'id', 'name', 'place', 'start_time', 'picture' ],
+        fields: [ 'id', 'name', 'location', 'start_time', 'picture' ],
         limit: config.facebook.query.limit,
         since: config.facebook.query.since
     });
