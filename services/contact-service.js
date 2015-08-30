@@ -1,6 +1,18 @@
 var config = require('../config');
 var sendGrid = require('sendgrid')(config.sendGrid.username, config.sendGrid.password);
 
+function emailIsValid(email) {
+    return /^[^ @]+@[^ @]+\.[^ @]+$/.test(email);
+}
+
+function messageIsValid(message) {
+    return message && message.replace(' ', '').length;
+}
+
+function nameIsValid(name) {
+    return name && name.replace(' ', '').length;
+}
+
 function sendMessage(name, email, message) {
     var payload = {
         to: 'cssoc.manchester@gmail.com',
@@ -18,17 +30,18 @@ function sendMessage(name, email, message) {
 
 module.exports = {
     send: function(name, email, message) {
-        if (!message) {
-            return 'Please provide a message.';
-        }
-
-        if (!name) {
-            name = 'anonymous';
+        if (!nameIsValid(name)) {
+            name = 'Anonymous';
         }
 
         if (!email) {
-            // TO-DO: Improve email address validation.
-            email = 'anonymous';
+            email = 'noreply@cssoc.co.uk';
+        } else if (!emailIsValid(email)) {
+            return 'Email address "' + email + '" is not valid.';
+        }
+
+        if (!messageIsValid(message)) {
+            return 'Please provide a message.';
         }
 
         sendMessage(name, email, message);
