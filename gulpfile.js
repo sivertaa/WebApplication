@@ -15,7 +15,7 @@ var imageConversionError = function(error) {
 
 gulp.task('minify-css', function() {
     return gulp.src(['assets/css/*.css', '!assets/css/*.min.*'])
-        .pipe(minifyCss())
+        // .pipe(minifyCss())
         .pipe(rename({
             suffix: '.min'
         }))
