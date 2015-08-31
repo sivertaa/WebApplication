@@ -1,0 +1,14 @@
+extends ../layout
+
+block title
+  | Error | CSSoc
+
+block append head
+  link(rel='stylesheet', href='/assets/css/error.min.css', type='text/css')
+
+block content
+  section#contact
+    h1
+      | Error
+    .response
+      p= message

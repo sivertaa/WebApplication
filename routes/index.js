@@ -17,4 +17,9 @@ module.exports = function(app) {
 
         require('./' + name)(app);
     });
+
+    // Catch-all route.
+    app.get('*', function(req, res) {
+        throw new Error('Page not found.');
+    });
 };

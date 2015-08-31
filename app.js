@@ -18,5 +18,10 @@ app.use('/assets', express.static('assets'));
 // Maps the routes.
 require('./routes')(app);
 
+// Error handling.
+app.use(function(err, req, res, next) {
+    res.render('error', { message: err.message });
+});
+
 // Starts the server.
 app.listen(config.server.port);

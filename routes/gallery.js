@@ -9,6 +9,10 @@ module.exports = function(app) {
         var albumId = req.params.albumId;
         var album = albumService.get(albumId);
 
+        if (!album) {
+            throw new Error('Album not found.');
+        }
+
         res.render('gallery/album', album);
     });
 };
