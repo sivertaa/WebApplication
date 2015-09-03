@@ -21,7 +21,11 @@ function toTwelveHourNotation(hours, minutes) {
 function toEnglishTime(date) {
     var englishDate = new Date(date);
 
-    englishDate.setHours(date.getHours() + 1);
+    // The order in which the following actions take place is important.
+    englishDate.setYear(date.getUTCFullYear());
+    englishDate.setMonth(date.getUTCMonth());
+    englishDate.setDate(date.getUTCDate());
+    englishDate.setHours(date.getUTCHours() + 1);
 
     return englishDate;
 }
