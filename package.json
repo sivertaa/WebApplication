@@ -6,6 +6,9 @@
       "email": "andrei.muntean.dev@gmail.com"
     }
   ],
+  "scripts": {
+    "test": "mocha tests"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/cssoc/WebApplication"
@@ -21,6 +24,9 @@
     "gulp-uglify": "^1.4.0",
     "jade": "^1.11.0",
     "sendgrid": "^1.9.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.0"
   },
   "private": true,
   "license": "MIT"

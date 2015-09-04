@@ -15,7 +15,7 @@ function nameIsValid(name) {
 
 function sendMessage(name, email, message) {
     var payload = {
-        to: 'cssoc.manchester@gmail.com',
+        to: config.email.contact,
         from: email,
         subject: name,
         text: message
@@ -35,7 +35,7 @@ module.exports = {
         }
 
         if (!email) {
-            email = 'noreply@cssoc.co.uk';
+            email = config.email.noreply;
         } else if (!emailIsValid(email)) {
             return 'Email address "' + email + '" is not valid.';
         }

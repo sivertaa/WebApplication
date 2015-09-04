@@ -1,7 +1,9 @@
 module.exports = {
+    email: {
+        contact: process.env.CONTACT_EMAIL,
+        noreply: process.env.NOREPLY_EMAIL
+    },
     facebook: {
-        appId: process.env.FACEBOOK_APP_ID,
-        appSecret: process.env.FACEBOOK_APP_SECRET,
         accessToken: process.env.FACEBOOK_ACCESS_TOKEN, // Must be updated every other month.
         query: {
             limit: 30,
