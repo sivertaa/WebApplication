@@ -34,6 +34,16 @@
             "id": "razvan-dutescu",
             "name": "Razvan Dutescu",
             "description": "Ball Officer"
+        },
+        {
+            "id": "sven-cortel",
+            "name": "Sven Cortel",
+            "description": "First Year Rep"
+        },
+        {
+            "id": "andrew-leeming",
+            "name": "Andrew Leeming",
+            "description": "Postgrad Rep"
         }
     ]
 }
